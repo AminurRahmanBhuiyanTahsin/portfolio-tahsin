@@ -39,8 +39,8 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Right Side: The Form */}
-        <form className="space-y-5 bg-zinc-50 p-8 rounded-2xl border border-zinc-200" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        {/* Right Side: The Form using your form endpoint */}
+        <form className="space-y-5 bg-zinc-50 p-8 rounded-2xl border border-zinc-200" action="https://formspree.io/f/mqerjdpe" method="POST">
           <div className="space-y-2">
             <label htmlFor="name" className="text-sm font-medium text-zinc-700">Your Name</label>
             <input type="text" id="name" name="name" className="w-full bg-white border border-zinc-300 rounded-xl px-4 py-3 text-zinc-900 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition" placeholder="John Doe" required />
@@ -52,8 +52,8 @@ export default function Contact() {
           </div>
           
           <div className="space-y-2">
-            <label htmlFor="message" className="text-sm font-medium text-zinc-700">Message</label>
-            <textarea id="message" name="message" rows={4} className="w-full bg-white border border-zinc-300 rounded-xl px-4 py-3 text-zinc-900 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition resize-none" placeholder="How can I help you?" required></textarea>
+            <label htmlFor="message" className="text-sm font-medium text-zinc-700">Message (Min. 10 characters)</label>
+            <textarea id="message" name="message" rows={4} minLength={10} className="w-full bg-white border border-zinc-300 rounded-xl px-4 py-3 text-zinc-900 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition resize-none" placeholder="Write a meaningful message..." required></textarea>
           </div>
           
           <button type="submit" className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-emerald-500 hover:bg-emerald-400 text-white font-bold rounded-xl transition duration-200 shadow-lg shadow-emerald-500/20">
